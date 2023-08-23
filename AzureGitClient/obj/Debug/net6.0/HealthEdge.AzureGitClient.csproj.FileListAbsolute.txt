@@ -1,0 +1,24 @@
+C:\Code\HealthEdge.AzureGitClient\bin\Debug\net6.0\HealthEdge.AzureGitClient.deps.json
+C:\Code\HealthEdge.AzureGitClient\bin\Debug\net6.0\HealthEdge.AzureGitClient.dll
+C:\Code\HealthEdge.AzureGitClient\bin\Debug\net6.0\HealthEdge.AzureGitClient.pdb
+C:\Code\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.csproj.AssemblyReference.cache
+C:\Code\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.AssemblyInfoInputs.cache
+C:\Code\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.AssemblyInfo.cs
+C:\Code\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.csproj.CoreCompileInputs.cache
+C:\Code\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.dll
+C:\Code\HealthEdge.AzureGitClient\obj\Debug\net6.0\refint\HealthEdge.AzureGitClient.dll
+C:\Code\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.pdb
+C:\Code\HealthEdge.AzureGitClient\obj\Debug\net6.0\ref\HealthEdge.AzureGitClient.dll
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\bin\Debug\net6.0\HealthEdge.AzureGitClient.deps.json
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\bin\Debug\net6.0\HealthEdge.AzureGitClient.dll
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\bin\Debug\net6.0\HealthEdge.AzureGitClient.pdb
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.csproj.AssemblyReference.cache
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.AssemblyInfoInputs.cache
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.AssemblyInfo.cs
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.csproj.CoreCompileInputs.cache
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.dll
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\obj\Debug\net6.0\refint\HealthEdge.AzureGitClient.dll
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\obj\Debug\net6.0\HealthEdge.AzureGitClient.pdb
+C:\Users\Artur\Desktop\Enterpernuer Folder\Coding Work\HealthEdge.AzureGitClient\HealthEdge.AzureGitClient\obj\Debug\net6.0\ref\HealthEdge.AzureGitClient.dll

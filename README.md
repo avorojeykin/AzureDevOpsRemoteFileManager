@@ -23,57 +23,35 @@ The `AzureDevOpsRemoteFileManager` is currently a class library and has not been
 
 Here is an example of the Class Library Being Integrated
 
-public string RunAzureDevOpsRemoteFileManager()
+        public void RunAzureDevOpsRemoteFileManager()
         {           
             // Creates new Feature Branch off of Specified Source Branch
-            _httpClient.createBranch(_configuration["sourceBranchName"], _configuration["featureBranchName"]);
+            _httpClient.CreateBranch(_configuration["sourceBranchName"], _configuration["featureBranchName"]);
 
-            _httpClient.getListOfIdsOfRepoFilesByRepo(_configuration["repo"]); //Get List of All File Ids in Bg.Next
-            string _editFileAlreadyExists = "";
-            string _customFactoryFileId = _httpClient.getIdOfSpecificRepoFile(_configuration["customFactoryFileRepoPath"]);// Get CustomFactory File Id based on repo path
-            string _customTypesFileId = _httpClient.getIdOfSpecificRepoFile(_configuration["customTypesFileRepoPath"]); // Get CustomTypes File Id based on repo path
-            string _customEditsFileId = _httpClient.getIdOfSpecificRepoFile(_configuration["customEditsFileRepoPath"]); // Get CustomEdits File Id based on repo path  
+            _httpClient.GetListOfIdsOfRepoFilesByRepo(_configuration["repoName"]); //Get List of All File Ids in Specified Repo
+            string _customFileAlreadyExists = "";                    
             try
             {
-                _editFileAlreadyExists = _httpClient.getIdOfSpecificRepoFile(_configuration["customFilePushURL"]); // Get Repo File URL of Custom File for Editing
+                _customFileAlreadyExists = _httpClient.GetIdOfSpecificRepoFile(_configuration["customFileRepoPath"]); // Get Repo File URL of Custom File for Editing
             }
             catch (Exception ex)
             {
-                _editFileAlreadyExists = "";
+                _customFileAlreadyExists = "";
             }
 
-            string customFactoryContent = _httpClient.getContentOfSpecificRepoFilesById(_customFactoryFileId); // Get Contents of Custom Factory File
+            string customFileContent = _httpClient.GetContentOfSpecificRepoFilesById(_customFileAlreadyExists); // Get Contents of Custom Factory File            
 
-            string customTypesContent = _httpClient.getContentOfSpecificRepoFilesById(_customTypesFileId); // Get Contents of Custom Types File
-
-            string customEditsContent = _httpClient.getContentOfSpecificRepoFilesById(_customEditsFileId); // Get Contents of Custom Edits File
-
-            // Edit Files & Commit and Push Changes           
-            string newCustomFactoryFileContent = _fileEditor.editCustomFactoryFile(customFactoryContent, _configuration["codeToInsert"]); // Returns Custom Factory File as string with insertion of Info at marker points
-            if (!newCustomFactoryFileContent.Equals(customFactoryContent))
+            // Edit Files & Commit and Push Changes
+            if (!_customFileAlreadyExists.Equals(""))
             {
-                _httpClient.pushEditBranchChanges(_configuration["featureBranchName"], newCustomFactoryFileContent, _configuration["customFactoryRepoPath"], $"Added CustomFactory Changes");
-            }
-
-            string newCustomTypesFileContent = _fileEditor.editCustomTypesFile(customTypesContent, _configuration["codeToInsert"]); // Returns Custom Types File as string with insertion of Info at marker points
-            if (!newCustomTypesFileContent.Equals(customTypesContent))
-            {
-                _httpClient.pushEditBranchChanges(_configuration["featureBranchName"], newCustomTypesFileContent, _configuration["customTypesRepoPath"], $"Added/Updated CustomTypes Changes");
-            }
-
-            string newCustomEditsFileContent = _fileEditor.editCustomEditsFile(customEditsContent, _configuration["codeToInsert"]); // Returns Custom Edits File as string with insertion of Info at marker points
-            if (!newCustomEditsFileContent.Equals(customEditsContent))
-            {
-                _httpClient.pushEditBranchChanges(_configuration["featureBranchName"], newCustomEditsFileContent, _configuration["customEditsRepoPath"], $"Added/Updated CustomEdits Changes");
-            }
-
-            if (!_editFileAlreadyExists.Equals(""))
-            {
-                return _httpClient.pushEditFileBranchChanges(_configuration["featureBranchName"], _configuration["editSourceCode"], _configuration["editPushURL"], $"Made Changes To File {_configuration["fileName"]}");
+                string newCustomFileContent = _fileEditor.EditCustomFile(customFileContent, _configuration["codeToInsert"]); // Returns Custom File as string with insertion of Info at marker points based on internal editCustomFile Method
+                if (!newCustomFileContent.Equals(customFileContent))
+                {
+                    _httpClient.PushEditFileBranchChanges(_configuration["featureBranchName"], newCustomFileContent, _configuration["customFileRepoPath"], $"Added CustomFactory Changes");
+                }
             }
             else
             {
-                return _httpClient.pushAddFileBranchChanges(_configuration["featureBranchName"], _configuration["editSourceCode"], _configuration["editPushURL"], $"Added New File {_configuration["fileName"]}"); //Pushes new file with Code provided inside Appsettings
-            }
+               _httpClient.PushAddFileBranchChanges(_configuration["featureBranchName"], _configuration["newFileSourceCode"], _configuration["newFilePushURL"], $"Added New File {_configuration["fileName"]}"); //Pushes new file with Code provided inside Appsettings
+            }           
         }
-    }
